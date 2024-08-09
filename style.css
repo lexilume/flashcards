@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+header{
+
+display:flex;
+min-height: 80px;
+width: 100%;
+background-color: #ccdeec;
+padding-left: 10%;
+padding-right: 10%;
+
+}
+
+#logo{
+
+display: flex;
+min-height: 80px;
+background: #ccdeec;
+float: left;
+justify-content: center; /* Centra el contenido horizontalmente */
+align-items: center;
+padding-top: 20px;
+margin: auto;
+
+}
+
+#botones{
+
+display: flex;
+min-height: 80px;
+background: #ccdeec;
+float: right;
+justify-content: center;
+align-items: center;
+padding-top: 20px;
+margin: auto;
+    
+}
+
+nav{
+
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #ccdeec;
+    padding-left: 52%;
+    padding-right: 10%;
+    
+    }
+
+main{
+min-height: 500px;
+width: 100%;
+background: #ccdeec;
+
+}
+
+#seccion1,
+#seccion2,
+#seccion3,
+#seccion4,
+#seccion5{
+
+min-height: 500px;
+width: 100%;
+display: flex;
+padding: 0 10% 0 10%;
+            
+}
+
+#seccion2,
+#seccion4{
+    background-color: #5b5cac;
+    flex-direction: row-reverse;
+}
+
+#izquierda1,
+#derecha2,
+#izquierda3,
+#derecha4,
+#izquierda5{
+        
+min-height: 500px;
+width: 100%;
+padding: 70px 0 20px 0;
+text-align: left;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+flex: 1;
+flex-grow: 1;
+            
+}
+
+#derecha1,
+#izquierda2,
+#derecha3,
+#izquierda4,
+#derecha5{
+        
+min-height: 500px;
+width: 100%;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+flex: 1;
+flex-grow: 1;
+            
+}
+
+#iframecontainer {
+    min-width: 100%;
+    align-items: center;
+    padding: 0;
+    margin:0;
+}
+
+footer{
+
+    height: 150px;
+    width: 100%;
+    background: #5b5cac;
+    display: flex;
+    align-items: center;
+    padding-left: 13%;
+    padding-right: 13%;
+    
+    }
+
+h1 {
+font-family: "Qwigley", cursive;
+color:#5b5cac;
+font-size: 8rem;
+font-weight: 600;
+font-style: normal;
+line-height: 0.8;
+margin-bottom: 50px;
+}
+
+h2 {
+font-family: "Roboto Condensed", sans-serif;
+color: #383838;
+font-optical-sizing: auto;
+font-size: 1rem;
+font-weight: 350;
+font-style: normal;
+margin-bottom: 15px;
+}
+
+h3 {
+font-family: "Roboto Condensed", sans-serif;
+color: #a42328;
+font-optical-sizing: auto;
+font-size: 20px;
+font-weight: 800;
+font-style: normal;
+}
+      
+h4 {
+font-family: "Roboto Condensed", sans-serif;
+color:#ffffff;
+font-optical-sizing: auto;
+font-size: 1rem;
+font-weight: 350;
+font-style: normal;
+margin-bottom: 15px;
+}
+
+h5 {
+font-family: "Qwigley", cursive;
+color:#ffffff;
+font-size: 8rem;
+font-weight: 600;
+font-style: normal;
+line-height: 0.8;
+margin-bottom: 50px;
+}
+
+.form-group {
+    width: 110px; /* Ajusta el ancho según sea necesario */
+    height: 30px; /* Ajusta la altura según sea necesario */
+    /* Otros estilos opcionales */
+    background-color: #f0f0f0; /* Color de fondo */
+    padding: 10px; /* Espacio interno alrededor del contenido */
+    border: 2px solid #ccc; /* Borde alrededor del contenedor */
+    border-radius: 10px; /* Radio de borde para bordes redondeados */
+}
+
+.btn {
+    font-size: 32px; /* Tamaño de fuente del botón */
+    /* Eliminamos el borde del botón */
+    border: none;
+    outline: none; /* Evita que aparezca un borde cuando el botón se enfoca */
+}
+
+#boton2 {
+    width: 77px; /* Ajusta el ancho según sea necesario */
+    height: 23.5px; /* Ajusta la altura según sea necesario */
+    /* Otros estilos opcionales */
+    background-color: #ccdeec; /* Color de fondo */
+    padding: 0px; /* Espacio interno alrededor del contenido */
+    border: none; /* Borde alrededor del contenedor */
+}
+
+#btn2 {
+    font-family: "Roboto Condensed", sans-serif; /* Fuente del botón */
+    color: #383838;
+    font-size: 20px; /* Tamaño de fuente del botón */
+    font-weight: 800; /* Peso de la fuente del botón */
+    font-style: normal; /* Estilo de la fuente del botón */
+    text-align: center;
+    border: none; /* Eliminamos el borde del botón */
+    outline: none; /* Evita que aparezca un borde cuando el botón se enfoca */
+    background: none; /* Elimina cualquier color de fondo o imagen de fondo */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+}
+
+/* Estilos para los elementos de la lista */
+ol.custom-list li {
+    margin-bottom: 15px; /* Espacio entre elementos de la lista */
+  }
+
+.no-break {
+    white-space: nowrap; /* Evitar el salto de línea entre palabras */
+}
+
+#marca + div{
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Ajusta para dispositivos móviles */
+
+    header{
+        padding: 0;
+    }
+
+    #seccion1,
+    #seccion2,
+    #seccion3,
+    #seccion4,
+    #seccion5{
+        flex-direction: column;
+        padding: 0;
+        height: 100vh;
+    }
+
+    #izquierda1,
+    #izquierda2, #derecha2,
+    #izquierda3, #derecha3,
+    #izquierda4, #derecha4,
+    #izquierda5, #derecha5 {
+        min-height: 45vh;
+        float: none; /* Elimina el float */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        align-items: center; /* Centra el contenido horizontalmente */
+        justify-content: center;
+        text-align: justify; /* Centra el texto dentro de cada elemento */
+        flex-grow: 0;
+    }
+
+    #izquierda1,
+    #derecha2,
+    #izquierda3,
+    #derecha4,
+    #izquierda5 {
+        padding-top: 30px;
+        padding-left: 50px; /* Espacio interior para separar los contenidos */
+        padding-right: 50px;
+    }
+
+    #derecha1{
+        min-height: 55vh;
+        float: none; /* Elimina el float */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        align-items: center; /* Centra el contenido horizontalmente */
+        justify-content: center;
+        flex-grow: 0;
+    }
+    
+    #imagenprincipal{
+        max-height: 80%;
+        width: auto;
+    }
+
+    #iframeflashcards {
+        transform: scale(0.8);
+        transform-origin: top;
+        min-width: 310px;
+    }
+
+    #iframecontainer {
+        height: 55vh;
+        width: 100%;
+        padding: 0;
+        margin:0;
+        justify-content: center;
+    }
+
+    h1 {
+        font-family: "Qwigley", cursive;
+        color:#5b5cac;
+        font-size: 5rem;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 0.8;
+        padding-bottom: 10px;
+        }
+        
+    h2 {
+        font-family: "Roboto Condensed", sans-serif;
+        color: #383838;
+        font-optical-sizing: auto;
+        font-size: 0.8rem;
+        font-weight: 350;
+        font-style: normal;
+        padding-bottom: 10px;
+        }
+
+    h5 {
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 0.8;
+        padding-bottom: 10px;
+        }
+
+    h4 {
+        font-size: 0.8rem;
+        font-weight: 350;
+        padding-bottom: 10px;
+        }
+}
