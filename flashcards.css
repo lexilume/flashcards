@@ -1,0 +1,272 @@
+/* Establece márgenes y relleno a 0 y el modelo de caja a border-box para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Establece el fondo del cuerpo del documento y la fuente a utilizar */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  height: 100vh; /* Altura completa de la ventana */
+  width: 100%;
+}
+
+/* Contenedor principal para las tarjetas */
+#tarjetas {
+  min-height: 400px; /* Altura mínima del contenedor para evitar que se colapse */
+}
+
+/* Contenedor para los botones */
+#botones {
+  min-height: 50px; /* Altura mínima del contenedor para evitar que se colapse */
+}
+
+/* Contenedor de cada tarjeta */
+.card-container {
+  position: relative; /* Posición relativa para alinear correctamente las tarjetas */
+  margin-bottom: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Tarjeta */
+.card {
+  position: absolute; /* Posición absoluta para superponer las tarjetas */
+  top: 0;
+  left: 50%; /* Centra la tarjeta horizontalmente */
+  transform: translateX(-50%); /* Centra la tarjeta horizontalmente */
+  opacity: 0; /* Inicialmente oculta las tarjetas */
+  pointer-events: none; /* Evita que las tarjetas sean clicables */
+  transition: opacity 0.5s ease; /* Transición para la opacidad */
+}
+
+/* Muestra la tarjeta activa */
+.card.active {
+  opacity: 1; /* Hace visible la tarjeta */
+  pointer-events: auto; /* Permite que la tarjeta sea cliclable */
+}
+
+/* Contenedor de la tarjeta que realiza el efecto de volteo */
+.flip-card {
+  position: relative;
+  width: 280px; /* Ancho de la tarjeta */
+  height: 350px; /* Altura de la tarjeta */
+  transform-style: preserve-3d; /* Establece el estilo de transformación */
+  transition: all 0.5s ease-in-out; /* Transición para el efecto de volteo */
+  z-index: 1; /* Coloca la tarjeta por encima de otros elementos */
+}
+
+/* Cara frontal y trasera de la tarjeta */
+.flip-card .front,
+.flip-card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #fff; /* Fondo blanco para las caras de la tarjeta */
+  backface-visibility: hidden; /* Oculta la cara trasera cuando se voltea */
+  border-radius: 20px; /* Bordes redondeados para la tarjeta */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* sombra en la parte inferior derecha */
+}
+
+/* Cara trasera de la tarjeta */
+.flip-card .back {
+  transform: rotateX(180deg); /* Voltea la tarjeta para mostrar la cara trasera */
+  color: #000; /* Color de texto */
+  background: #fff; /* Fondo blanco */
+}
+
+/* Oculta los botones de selección de checkbox */
+input {
+  display: none;
+}
+
+/* Voltea la tarjeta al hacer clic en el checkbox */
+:checked + .flip-card {
+  transform: rotateX(180deg);
+}
+
+/* Estilos para la imagen en la cara frontal de la tarjeta */
+.front img {
+  margin: 30px 0 20px 0; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para el título en la cara frontal de la tarjeta */
+.front h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin: 0; /* Elimina el margen superior e inferior */
+}
+
+/* Estilos para el subtítulo en la cara frontal de la tarjeta */
+.front h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin: 12px 0 12px 0; /* Espacio entre el subtítulo y otros elementos */
+}
+
+/* Estilos para el texto en negrita en la cara frontal de la tarjeta */
+.front b {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin: 0 0 35px 0; /* Espacio entre el texto en negrita y otros elementos */
+  display: block; /* Muestra el texto en negrita como un bloque */
+}
+
+/* Estilos para el texto en la cara frontal de la tarjeta y en la cara trasera */
+.front p,
+.back .click {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  font-weight: 600; /* Texto en negrita */
+}
+
+#p1 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 4.175rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 30px;
+}
+
+#p2 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 15px;
+}
+
+#p3 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 2.9rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 15px;
+}
+
+#p4 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 3.3rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 15px;
+}
+
+#p5 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 15px;
+}
+
+#p6 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 4.175rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  margin-bottom: 15px;
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Estilos para el texto en la cara trasera de la tarjeta */
+.back p {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 5rem;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center; /* Centra el contenido */
+  justify-content: center; /* Centra el texto */
+  margin: 0 auto; /* Centra horizontalmente el texto */
+}
+
+/* Estilos para el botón de siguiente */
+#next-btn {
+  padding: 10px 20px; /* Relleno del botón */
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  background-color: #a42328; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+}
+
+/* Estilos para el icono de la flecha junto al texto del botón */
+#next-btn span {
+  margin-left: 5px; /* Espacio entre el texto y el icono */
+}
+
+#prev-btn {
+  padding: 10px 20px; /* Relleno del botón */
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  background-color: #a42328; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor al pasar sobre el botón */
+}
+
+/* Estilos para el icono de la flecha junto al texto del botón */
+#prev-btn span {
+  margin-right: 5px; /* Espacio entre el texto y el icono */
+}
+
+#marca + div{
+  visibility: hidden;
+}
