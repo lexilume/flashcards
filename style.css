@@ -52,7 +52,7 @@ nav{
     justify-content: space-evenly;
     width: 100%;
     background-color: #ccdeec;
-    padding-left: 59%;
+    padding-left: 60%;
     padding-right: 21%;
     
     }
@@ -68,7 +68,8 @@ background: #ccdeec;
 #seccion2,
 #seccion3,
 #seccion4,
-#seccion5{
+#seccion5,
+#seccion6{
 
 min-height: 500px;
 width: 100%;
@@ -78,7 +79,8 @@ padding: 0 10% 0 10%;
 }
 
 #seccion2,
-#seccion4{
+#seccion4,
+#seccion6{
     background-color: #5b5cac;
     flex-direction: row-reverse;
 }
@@ -87,7 +89,8 @@ padding: 0 10% 0 10%;
 #derecha2,
 #izquierda3,
 #derecha4,
-#izquierda5{
+#izquierda5,
+#derecha6{
         
 min-height: 500px;
 width: 100%;
@@ -105,7 +108,8 @@ flex-grow: 1;
 #izquierda2,
 #derecha3,
 #izquierda4,
-#derecha5{
+#derecha5,
+#izquierda6{
         
 min-height: 500px;
 width: 100%;
